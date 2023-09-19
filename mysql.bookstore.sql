@@ -1,0 +1,10 @@
+select * from books where price > 30;
+select * from customers where email like '%@hotmail%';
+select * from authors where best_selling_books > 2;
+select * from order_details where qty between 2 and 5;
+select * from books where publication_year > 2000;
+select * from authors where country like '%USA%';
+select * from authors where age > 0;
+select * from books inner join authors on books.author_id = authors.id;
+SELECT customers.first_name, customers.last_name, orders.order_date FROM customers LEFT JOIN orders ON customers.id = orders.customer_id;
+SELECT publishers.name AS publisher_name FROM books RIGHT JOIN publishers ON books.publishers_id = publishers.id;
